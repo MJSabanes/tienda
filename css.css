@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Bubblegum+Sans&display=swap');
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	background: #40739e;
+	color: #f5f6fa;
+	min-height: 100%; 
+	 
+}
+
+.grid_container{
+display: grid;
+	gap: 5px;		
+grid-template: 
+		"header 	header 	header" 	100px 
+		"navbar 	navbar	navbar" 	100px
+		"contenido1	contenido2	contenido3"		auto
+		"contenido4	contenido5	contenido6"		auto
+		"footer 	footer 	footer" 	600px /
+		 600px 		600px	600px;
+
+background:
+url(pollo.png) right bottom no-repeat,
+url(pollo.png) left bottom no-repeat,
+url(pollo.png) left top no-repeat,
+url(pollo.png) right top no-repeat,
+url(madera.png) 0 0;
+	}
+
+.contenido1{
+	grid-area: contenido1;
+}
+.contenido2{
+	grid-area: contenido2;
+}.contenido3{
+	grid-area: contenido3;
+}.contenido4{
+	grid-area: contenido4;
+}.contenido5{
+	grid-area: contenido5;
+}.contenido6{
+	grid-area: contenido6;
+}
+.header{
+	grid-area: header;
+	background-color: #ad0101;
+}
+.header p{
+	font-family: 'Black Han Sans', sans-serif;
+	font-size: 2em;
+	text-align: center;
+	padding: 20px 0;
+}
+
+.navbar{
+	grid-area: navbar;
+	background-color: #A3CB38;
+}
+
+.main{
+	grid-area: main;
+	background-color: #12CBC4;
+}
+
+.sidebar{
+	grid-area: sidebar;
+	background-color: #D980FA;
+}
+
+.footer{
+	grid-area: footer;
+	background-color: #B53471;
+}
+
+
+#menu{
+margin: 0;
+height: 10px;
+width: 95%;}
+
+#menu li{
+display: inline;   
+}
+
+#menu li a{
+font-size: 35px; 
+font-family: 'Bubblegum Sans', cursive;
+text-decoration: none;
+float: right;
+padding-top: 1.5%;
+padding-left: 5%;
+color: #ffffff;}
+
+#logo{
+font-size: 35px; 
+font-family:'Black Han Sans', sans-serif;
+color: #ffba00;
+padding-top: 1%;
+padding-left: 5%;
+float: left;}
+
+
+
+#madera{
+background:
+url(pollo.png) right bottom no-repeat,
+url(pollo.png) left bottom no-repeat,
+url(pollo.png) left top no-repeat,
+url(pollo.png) right top no-repeat,
+url(madera.png) 0 0;
+}
+
+p{
+display: block;
+text-align: center;
+font-size: 20px;
+color: #ffffff;
+font-family: 'Bubblegum Sans', cursive;
+} 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 600px) {
+
+	.grid_container{
+
+		grid-template: 
+		"header 	header" 	100px 
+		"navbar 	navbar" 	50px
+		"sidebar 	main" 		auto
+		"footer 	footer" 	100px /
+		 200px 		auto;
+ 	}
+
+}
+
+
+@media (min-width: 900px) {
+	.grid_container{
+		grid-template: 
+		"header 	header 	header" 	100px 
+		"navbar 	main 	sidebar" 	auto
+		"footer 	footer 	footer" 	100px /
+		 400px 		auto 	200px;
+	}
+}
